@@ -1,10 +1,28 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <header>
+    <Logo />
+  </header>
+  <main>
+    <router-view/>
+  </main>
+  <nav id="nav">
+    <router-link :to="{ name: 'Dashboard' }">Dashboard</router-link> |
+    <router-link :to="{ name: 'Details' }">Details</router-link> |
+    <router-link :to="{ name: 'Calculator' }">Calculator</router-link> |
+    <router-link :to="{ name: 'Diagram' }">Diagram</router-link>
+    <!-- <router-link :to="{ name: 'User' }" username="lorem">User</router-link> -->
+  </nav>
 </template>
+
+<script>
+import Logo from '@/components/Logo.vue'
+
+export default {
+  components: {
+    Logo
+  }
+}
+</script>
 
 <style lang="less">
 #app {
