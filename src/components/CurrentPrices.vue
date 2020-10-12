@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
 export default {
   setup () {
@@ -27,7 +27,9 @@ export default {
         })
     }
 
-    getCurrentPrices()
+    onMounted(() => {
+      getCurrentPrices()
+    })
 
     return {
       getCurrentPrices,
