@@ -13,7 +13,7 @@
       <button>calculate</button>
     </form>
 
-    <div class="output">{{ outputValue }} {{ currency }}</div>
+    <div class="output">{{ outputValue }} BTC</div>
   </div>
 </template>
 
@@ -21,7 +21,6 @@
 import { ref, onMounted } from 'vue'
 
 export default {
-
   setup () {
     const inputValue = ref(null)
     const outputValue = ref(0)
@@ -40,11 +39,10 @@ export default {
           currencies.value = data
         })
     }
-    // populate the select element
-    getCurrencies()
 
     const changeCurrency = (val) => {
       currency.value = val
+      calculate()
     }
 
     const calculate = () => {
@@ -57,6 +55,8 @@ export default {
 
     onMounted(() => {
       input.value.focus()
+      // populate the select element
+      getCurrencies()
     })
 
     return {
