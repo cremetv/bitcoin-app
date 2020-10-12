@@ -1,0 +1,13 @@
+.hover-mixin(@content) {
+  @media (hover: hover) {
+    &:hover {
+      @content();
+    }
+  }
+}
+
+
+.fw(@fontWeight) {
+  font-weight: var(@fontWeight);
+  font-variation-settings: 'wght' var(@fontWeight), 'slnt' 0;
+}

@@ -1,8 +1,8 @@
 <template>
-  <header>
+  <header id="header">
     <Logo />
   </header>
-  <main>
+  <main id="main">
     <router-view/>
   </main>
   <nav id="nav">
@@ -25,6 +25,10 @@ export default {
 </script>
 
 <style lang="less">
+@import '_styles/_variables.less';
+@import '_styles/_mixins.less';
+@import '_styles/_base.less';
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -33,8 +37,17 @@ export default {
   color: #2c3e50;
 }
 
+#header {
+  background: var(--header-primary);
+}
+
+#main {
+  background: var(--background-primary);
+}
+
 #nav {
   padding: 30px;
+  background: var(--background-secondary);
 
   a {
     font-weight: bold;
