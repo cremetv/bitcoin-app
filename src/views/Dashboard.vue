@@ -17,3 +17,10 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="less">
+.dashboard {
+  padding: 1rem;
+  color: var(--text-normal);
+}
+</style>

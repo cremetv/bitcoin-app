@@ -92,6 +92,10 @@ export default {
 @import '../_styles/_mixins.less';
 @import '../_styles/_cards.less';
 
+.details {
+  padding: 1rem;
+}
+
 .card {
 
   .title {
