@@ -1,5 +1,5 @@
 # bitcoin-app
-
+[Design](https://www.figma.com/file/KAx8fj0tTS3gzk9gOgtW4Z/sD-Aufgabe?node-id=6%3A40)
 ## Project setup
 ```
 npm install
@@ -22,3 +22,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+## TO-Do
+- [] ...
