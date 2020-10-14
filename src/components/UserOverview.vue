@@ -1,6 +1,6 @@
 <template>
   <div>
-    user overview for {{ username }}
+    user overview for {{ username }} ...
   </div>
 </template>
 
