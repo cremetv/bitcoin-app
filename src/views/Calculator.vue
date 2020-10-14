@@ -6,9 +6,11 @@
         <div class="prefix"></div>
         <input ref="input" v-model="inputValue" name="inputValue">
         <div class="currency">
-          <select v-model="currency" @change="changeCurrency($event.target.value)">
-            <option v-for="(values, currency) in currencies" :key="currency">{{ currency }}</option>
-          </select>
+          <div class="custom-select">
+            <select name="currency" id="currency" v-model="currency" @change="changeCurrency($event.target.value)">
+              <option v-for="(values, currency, i) in currencies" :key="i" :value="currency">{{ currency }}</option>
+            </select>
+          </div>
         </div>
       </div>
 
@@ -105,8 +107,8 @@ export default {
         })
     }
 
+    // handle keypad inputs
     const pressKey = (key) => {
-      console.log('inputValue.value', inputValue.value)
       if (key === 'del') {
         // remove last character
         inputValue.value = inputValue.value.substring(0, inputValue.value.length - 1)
