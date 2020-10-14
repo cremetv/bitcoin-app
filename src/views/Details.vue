@@ -94,6 +94,8 @@ export default {
 
 .details {
   padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .card {
